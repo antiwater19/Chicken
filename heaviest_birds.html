@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heaviest Birds Table</title>
+</head>
+
+<body>
+    <h1>Heaviest Birds </h1>
+    <table>
+        <!-- 표가 복잡하다면 반드시 thead와 tbody를 지정해주어 보기 편하게 하자 -->
+        <thead>
+            <tr>
+                <th>Animal</th>
+                <th>Average mass[kg (lb)]</th>
+                <th>Maximum mass[kg (lb)]</th>
+                <th>Flighted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Common ostrich</td>
+                <td>104 kg(229 lb)</td>
+                <td>156.8 kg (346 lb)</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Somali ostrich</td>
+                <td>90 kg(200 lb)</td>
+                <td>130 kg (290 lb)</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Turkey</td>
+                <td>13.5 kg (30 lb)</td>
+                <td>39 kg (86 lb)</td>
+                <td>Yes</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>v2</h2>
+    <table>
+        <!-- 표가 복잡하다면 반드시 thead와 tbody를 지정해주어 보기 편하게 하자 -->
+        <thead>
+            <tr>
+                <th rowspan="2">Animal</th>
+                <th colspan="2">Average mass</th>
+                <th rowspan="2">Flighted</th>
+            </tr>
+            <tr>
+                <th>Kg</th>
+                <th>Lb</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Common ostrich</td>
+                <td>104 kg</td>
+                <td>229 lb</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Somali ostrich</td>
+                <td>90 kg</td>
+                <td>200 lb</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Turkey</td>
+                <td>13.5 kg</td>
+                <td>30 lb</td>
+                <td>Yes</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
