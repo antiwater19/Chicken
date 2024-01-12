@@ -32,11 +32,11 @@
         <p>
             <!-- label이랑 input, 이거는 비표준 그리고 이렇게 쓰면 헷갈린다-->
             <label for="number">Enter a Number:
-                <input type="number" placeholder="enter a number" name="num">
+                <input type="number" placeholder="enter a number" name="num" min="1" max="1000">
             </label>
         </p>
         <!-- 이 버튼은 submit을 하지 않는 타입이다. -->
-        <button type="button">Regular button (won't submit)</button>
+        <button type=" button">Regular button (won't submit)</button>
         <!-- 이 버튼은 form안에 있음으로 submit을 한다. -->
         <button>Submit!!!!</button>
         <!-- 얘도 submit함. -->
@@ -76,15 +76,54 @@
         <input type="checkbox" name="agree_tos" id="agree">
         <label for="agree">I agree to evertthing</label>
         <p>
+            <label for="xs">XS:</label>
             <!-- radio타입은 같은 name을 부여해서 서로 연결해야한다. -->
-            <input type="radio" name="" id="">
-            <input type="radio" name="" id="">
-            <input type="radio" name="" id="">
+            <input type="radio" name="size" id="xs" value="xs">
+            <label for="s">S</label>
+            <input type="radio" name="size" id="s" value="s">
+            <label for="m">M</label>
+            <input type="radio" name="size" id="m" value="m">
+        </p>
+        <p>
+            <label for="meal">Please Select an Entree</label>
+            <select name="meal" id="meal">
+                <!--option value="">--Please choos an option--</option-->
+                <option value="fish">Fish</option>
+                <option value="veg" selected>Vegetarian</option>
+                <option value="steak">Steak</option>
+            </select>
+        </p>
+        <p>
+            <label for="cheese">Amount of Cheese</label>
+            <input type="range" id="cheese" min="1" max="100" value="75" name="cheese_level">
+        </p>
+
+        <p>
+            <label for="requests">Any Special Requests?</label>
+            <br>
+            <textarea id="requests" rows="10" cols="40" name="Requests" placeholder="Type somthing anything"></textarea>
         </p>
         <button>Submit</button>
 
     </form>
 
+    <h2>Validation Demo</h2>
+    <form action="/dummy">
+        <label for="first">Enter First Name</label>
+        <input type="text" name="first" id="first" required>
+        <p>
+            <label for="username">Username</label>
+            <!-- 비밀번호가 5자리 이상이어야 합니다 처럼 유효성검사가 가능함 -->
+            <input type="text" id="username" name="username" minlength="5" maxlength="10">
+        </p>
+
+        <p>
+            <!-- <input type="email" required> -->
+            <input type="url">
+        </p>
+
+        <button>Submit</button>
+    </form>
 </body>
 
 </html>
